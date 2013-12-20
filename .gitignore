@@ -11,3 +11,6 @@ dist
 .tmp
 .sass-cache
 app/bower_components
+
+#grunt-build-control
+.sublime-grunt.cache
