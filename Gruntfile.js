@@ -341,7 +341,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:oblongmana/angular-color-less.git',
+          remote: 'git@github.com:Oblongmana/angular-color-less.git',
           branch: 'gh-pages'
         }
       }
