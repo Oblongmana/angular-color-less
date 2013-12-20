@@ -1,0 +1,60 @@
+<div class="header">
+  <!-- <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul> -->
+  <h3 class="text-muted">angular color less</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>Colors!</h1>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group" ng-repeat="color in colors track by $index">
+      <div class="input-group input-group-lg" style="width:100%">
+        <span class="input-group-addon" style="width:20%; background-color: {{applyLESSFuncs(color.value)}}; color: {{contrast(applyLESSFuncs(color.value))}}; font-family: monospace;" ng-bind="applyLESSFuncs(color.value)"></span>
+        <input type="text" class="form-control" ng-model="color.value" />
+        <span class="input-group-btn">
+          <button class="btn btn-default btn" type="button" ng-click="duplicate($index)">
+            <i class="fa fa-files-o"></i>
+          </button>
+          <button class="btn btn-default btn" type="button" ng-click="remove($index)">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+    <button ng-click="add()" type="button" class="btn btn-default btn-lg btn-block">Add Another</button>
+  </div>
+</div>
+
+<!-- <div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+</div>
+
+<div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div>
+
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div>
+ -->

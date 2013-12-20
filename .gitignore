@@ -1,0 +1,13 @@
+#OSX-specific exclusions
+.[dD][sS]_[sS]tore
+
+#Sublime nature exclusions
+*.sublime-workspace
+*.sublime-project
+
+#yo angular
+node_modules
+dist
+.tmp
+.sass-cache
+app/bower_components
