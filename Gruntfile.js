@@ -12,6 +12,7 @@ module.exports = function (grunt) {
   //TODO: I should probably work out how to get 'load-grunt-tasks' to load this
   // Shame I don't know what I'm doing yet :D
   grunt.loadNpmTasks('grunt-bower-install');
+  grunt.loadNpmTasks('grunt-build-control');
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -328,6 +329,21 @@ module.exports = function (grunt) {
         //
         //   default: '.'
         cwd: 'module'
+      }
+    },
+
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:example_user/example_webapp.git',
+          branch: 'gh-pages'
+        }
       }
     },
 
