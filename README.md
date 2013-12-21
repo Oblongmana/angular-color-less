@@ -1,8 +1,10 @@
-# angular-color-less
+# [angular-color-less](http://oblongmana.com/angular-color-less)
 
 An AngularJS app for quickly viewing/playing with hex colours, that lets you use LESS functions.
 
-This was a one-night hack, so still fairly unrefined. That said, it does definitely work.
+You can find it live here: [http://oblongmana.com/angular-color-less](http://oblongmana.com/angular-color-less)
+
+This was a one-night hack, so still fairly unrefined. That said, it does definitely work. No saving or anything, that might happen eventually if I move to heroku.
 
 Specific issues include (but are definitely not limited to):
  - Any time you type anything, the function parsing thing immediately tries to parse it. That's bad, because if you've only typed part of it, you'll get lots of errors being spit out into console. LOTS OF THEM.
