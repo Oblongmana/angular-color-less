@@ -1,0 +1,62 @@
+<div class="header">
+  <h2 class="text-muted">angular color less</h2>
+  <p class="text-muted"><em>Repo available at <a href="http://github.com/oblongmana/angular-color-less">http://github.com/oblongmana/angular-color-less</a></em></p>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>Colors!</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color: #428bd0; color: white;">
+        <!-- hahaha I do what I want. nbsp br for life -->
+        &nbsp;<br/>
+        &nbsp;<br/>
+        &nbsp;<br/>
+        &nbsp;<br/>
+        &nbsp;<br/>
+        &nbsp;<br/>
+        &nbsp;<br/>
+      </div>
+      <div class="panel-body">
+        <div class="btn-group btn-group-lg btn-group-justified">
+          <a class="btn btn-default" disabled="disabled" type="button" ng-click="duplicate($index)">
+            <strong>RGB</strong><br/>
+            #428bd0
+          </a>
+          <a class="btn btn-default" type="button" ng-click="duplicate($index)">
+            <i class="fa fa-files-o"></i>
+          </a>
+          <a class="btn btn-default" type="button" ng-click="remove($index)">
+            <span class="glyphicon glyphicon-remove"></span>
+          </a>
+        </div>
+        <form role="form">
+          <div class="form-group">
+            <textarea class="form-control pull-left" rows="2" style="width:100%; height:auto;" ng-model="color.value"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="form-group" ng-repeat="color in colors track by $index">
+      <div class="input-group input-group-lg" style="width:100%">
+        <span class="input-group-addon" style="width:20%; background-color: {{applyLESSFuncs(color.value)}}; color: {{contrast(applyLESSFuncs(color.value))}}; font-family: monospace;" ng-bind="applyLESSFuncs(color.value)"></span>
+        <input type="text" class="form-control" ng-model="color.value" />
+        <span class="input-group-btn">
+          <button class="btn btn-default btn" type="button" ng-click="duplicate($index)">
+            <i class="fa fa-files-o"></i>
+          </button>
+          <button class="btn btn-default btn" type="button" ng-click="remove($index)">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+    <button ng-click="add()" type="button" class="btn btn-default btn-lg btn-block">Add Another</button>
+  </div>
+</div>

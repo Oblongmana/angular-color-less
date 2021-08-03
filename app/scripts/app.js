@@ -12,6 +12,10 @@ angular.module('colorLessApp', [
         templateUrl: 'views/main.html',
         controller: 'ColorcontrollerCtrl'
       })
+      .when('/pantoneView', {
+        templateUrl: 'views/pantoneView.html',
+        controller: 'ColorcontrollerCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

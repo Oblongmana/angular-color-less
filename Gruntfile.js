@@ -141,9 +141,9 @@ module.exports = function (grunt) {
       }
     },
 
-    
 
-    
+
+
 
     // Renames files for browser caching purposes
     rev: {
@@ -418,7 +418,7 @@ module.exports = function (grunt) {
     'concat',
     'ngmin',
     'copy:dist',
-    'cdnify',
+    // 'cdnify',
     'cssmin',
     'uglify',
     'rev',
